@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <title>Projeto 3 - DrivenEats</title>
+</head>
+
+<body>
+    <header>
+        <div class="cabecalho">
+            <div class="nome-do-restaurante"> DrivenEats</div>
+            <div class="slogan">Sua comida em 6 minutos!</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="comida">
+            <div class="titulo"> Primeiro, o seu prato</div>
+            <div class="scroll desabilitar-scrollbars">
+
+                <div data-test="dish" class="opcao frango" onclick="primeiraescolha('.frango','#f1-c1')">
+                    <div class="figura">
+                        <img src="imagens/frango_yin_yang.png" alt="frango_yin_yang">
+                    </div>
+                    <div data-test="nome-do-item" class="nome-da-comida">Frango Yin Yang</div>
+                    <div class="descricao">
+                        Um pouco de batata, um pouco de salada
+                    </div>
+                    <div data-test="preco-do-item" class="preco">R$ 14,90</div>
+                    <div class="preco-numerico"> 14.90</div>
+                    <ion-icon id="f1-c1" class="check" name="checkmark-circle"></ion-icon>
+                </div>
+
+                <div data-test="dish" class="opcao pizza" onclick="primeiraescolha('.pizza','#f1-c2')">
+                    <div class="figura">
+                        <img src="imagens/pepperoni-pizza.jpg" alt="pepperoni-pizza">
+                    </div>
+                    <div data-test="nome-do-item" class="nome-da-comida">Pizza de Pepperoni</div>
+                    <div class="descricao">
+                        Massa suculenta e sabor delicioso
+                    </div>
+                    <div data-test="preco-do-item" class="preco">R$ 39,90</div>
+                    <div class="preco-numerico"> 39.90</div>
+                    <ion-icon id="f1-c2" class="check" name="checkmark-circle"></ion-icon>
+                </div>
+
+                <div data-test="dish" class="opcao carbonara" onclick="primeiraescolha('.carbonara','#f1-c3')">
+                    <div class="figura">
+                        <img src="imagens/359016_original.jpg" alt="carbonara">
+                    </div>
+                    <div data-test="nome-do-item" class="nome-da-comida">Macarrão Carbonara</div>
+                    <div class="descricao">
+                        Bacon e parmesão saborosos com tempero de pimenta do reino
+                    </div>
+                    <div data-test="preco-do-item" class="preco">R$ 21,90</div>
+                    <div class="preco-numerico"> 21.90</div>
+                    <ion-icon id="f1-c3" class="check" name="checkmark-circle"></ion-icon>
+                </div>
+
+
+            </div>
+        </section>
+
+        <section class="bebida">
+            <div class="titulo">Agora, sua bebida</div>
+            <div class="scroll desabilitar-scrollbars">
+                <div data-test="dish" class="opcao coca-cola" onclick="segundaescolha('.coca-cola','#f2-c1')">
+                    <div class="figura">
+                        <img src="imagens/coca-cola.png" alt="coca-cola">
+                    </div>
+                    <div data-test="nome-do-item" class="nome-da-comida">Coquinha gelada</div>
+                    <div class="descricao">
+                        Lata 350ml
+                    </div>
+                    <div data-test="preco-do-item" class="preco">R$ 4,90</div>
+                    <div class="preco-numerico"> 4.90</div>
+                    <ion-icon id="f2-c1" class="check" name="checkmark-circle"></ion-icon>
+                </div>
+
+                <div data-test="dish" class="opcao sucos" onclick="segundaescolha('.sucos','#f2-c2')">
+                    <div class="figura">
+                        <img src="imagens/sucos.jpg" alt="sucos">
+                    </div>
+                    <div data-test="nome-do-item" class="nome-da-comida">Sucos Naturais</div>
+                    <div class="descricao">
+                        Copos de 500 ml : Laranja, Maracujá, Limão e Uva
+                    </div>
+                    <div data-test="preco-do-item" class="preco">R$ 8,90</div>
+                    <div class="preco-numerico"> 8.90</div>
+                    <ion-icon id="f2-c2" class="check" name="checkmark-circle"></ion-icon>
+                </div>
+
+                <div data-test="dish" class="opcao heineken" onclick="segundaescolha('.heineken','#f2-c3')">
+                    <div class="figura">
+                        <img src="imagens/heineken.png" alt="heineken">
+                    </div>
+                    <div data-test="nome-do-item" class="nome-da-comida">Heineken</div>
+                    <div class="descricao">
+                        Longneck geladíssima
+                    </div>
+                    <div data-test="preco-do-item" class="preco">R$ 11,90</div>
+                    <div class="preco-numerico"> 11.90</div>
+                    <ion-icon id="f2-c3" class="check" name="checkmark-circle"></ion-icon>
+                </div>
+            </div>
+        </section>
+
+        <section class="sobremesa">
+            <div class="titulo">Por fim, sua sobremesa</div>
+            <div class="scroll desabilitar-scrollbars">
+
+                <div data-test="dish" class="opcao pudim" onclick="terceiraescolha('.pudim','#f3-c1')">
+                    <div class="figura">
+                        <img src="imagens/pudim.png" alt="pudim">
+                    </div>
+                    <div data-test="nome-do-item" class="nome-da-comida">Pudim</div>
+                    <div class="descricao">
+                        Apenas pudim
+                    </div>
+                    <div data-test="preco-do-item" class="preco">R$ 7,90</div>
+                    <div class="preco-numerico"> 7.90</div>
+                    <ion-icon id="f3-c1" class="check" name="checkmark-circle"></ion-icon>
+                </div>
+
+                <div data-test="dish" class="opcao gateau" onclick="terceiraescolha('.gateau','#f3-c2')">
+                    <div class="figura">
+                        <img src="imagens/gateau.jpg" alt="gateau">
+                    </div>
+                    <div data-test="nome-do-item" class="nome-da-comida">Petit Gatêau</div>
+                    <div class="descricao">
+                        Acompanhado de duas bolas de sorvete de creme
+                    </div>
+                    <div data-test="preco-do-item" class="preco">R$ 12,90</div>
+                    <div class="preco-numerico"> 12.90</div>
+                    <ion-icon id="f3-c2" class="check" name="checkmark-circle"></ion-icon>
+                </div>
+
+                <div data-test="dish" class="opcao dindin" onclick="terceiraescolha('.dindin','#f3-c3')">
+                    <div class="figura">
+                        <img src="imagens/dindin.jpg" alt="Dindin">
+                    </div>
+                    <div data-test="nome-do-item" class="nome-da-comida">Dindin</div>
+                    <div class="descricao">
+                        Chocolate, brigadeiro, laranja, uva, maracujá e leite ninho
+                    </div>
+                    <div data-test="preco-do-item" class="preco">R$ 5,99</div>
+                    <div class="preco-numerico"> 5.99</div>
+                    <ion-icon id="f3-c3" class="check" name="checkmark-circle"></ion-icon>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <button class="botao-footer" data-test="order-btn" onclick="confirmarpedido()" disabled>Selecione os 3 itens
+            <br>para fechar o pedido</button>
+    </footer>
+
+
+</body>
+
+</html>
