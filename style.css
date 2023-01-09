@@ -351,3 +351,7 @@ button {
 a {
     text-decoration: none;
 }
+
+.preconumerico {
+    display: none;
+}
