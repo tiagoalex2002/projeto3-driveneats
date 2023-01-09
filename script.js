@@ -108,7 +108,7 @@ function pedido() {
     let textoComidaDois = condicaodois(comidadois);
     let textoComidaTres = condicaotres(comidatres);
     console.log(textoComidaUm);
-    let link = "https://wa.me/5518999999999?text=Ol%c3%a1%2c+gostaria+de+fazer+o+pedido%3a%0d%0a-+Prato%3a+" + textoComidaUm + "%0d%0a-+Bebida%3a+" + textoComidaDois + "%0d%0a-+Sobremesa%3a+" + textoComidaTres + "%0d%0aTotal%3a+R%24+" + s + "%0A%0ANome%3A%20" + nomeurl + "%0AEndere%C3%A7o%3A%20" + enderecourl;
+    let link = "https://wa.me/5583999262591?text=Ol%c3%a1%2c+gostaria+de+fazer+o+pedido%3a%0d%0a-+Prato%3a+" + textoComidaUm + "%0d%0a-+Bebida%3a+" + textoComidaDois + "%0d%0a-+Sobremesa%3a+" + textoComidaTres + "%0d%0aTotal%3a+R%24+" + s + "%0A%0ANome%3A%20" + nomeurl + "%0AEndere%C3%A7o%3A%20" + enderecourl;
     console.log(link);
     document.querySelector('a').href = link;
 }
