@@ -61,6 +61,53 @@ function terceiraescolha(opcaoSelecionada, idCheck) {
     enableButton();
 }
 
+function condicaoum(comidaum) {
+    let textoComidaUm = 0;
+    if (comidaum.textContent === "Frango Yin Yang") {
+        textoComidaUm = "Frango+Yin+Yang";
+        return textoComidaUm;
+    }
+    else if (comidaum.textContent === "Pizza de Pepperoni") {
+        textoComidaUm = "Pizza+de+Pepperoni";
+        return textoComidaUm;
+    }
+    else if (comidaum.textContent === "Macarrão Carbonara") {
+        textoComidaUm = "Macarrão+Carbonara";
+        return textoComidaUm;
+    }
+    console.log(textoComidaUm);
+}
+
+function condicaodois(comidadois) {
+    if (comidadois.textContent === "Coquinha gelada") {
+        let textoComidaDois = "Coquinha+gelada";
+        return (textoComidaDois);
+    }
+    else if (comidadois.textContent === "Sucos Naturais") {
+        let textoComidaDois = "Sucos+Naturais";
+        return (textoComidaDois);
+    }
+    else if (comidadois.textContent === "Heineken") {
+        let textoComidaDois = "Heineken";
+        return (textoComidaDois);
+    }
+}
+
+function condicaotres(comidatres) {
+    if (comidatres.textContent === "Pudim") {
+        let textoComidaTres = "Pudim";
+        return textoComidaTres;
+    }
+    else if (comidatres.textContent === "Petit Gatêau") {
+        let textoComidaTres = "Petit+Gatêau";
+        return textoComidaTres;
+    }
+    else if (comidatres.textContent === "Dindin") {
+        let textoComidaTres = "Dindin";
+        return textoComidaTres;
+    }
+}
+
 function confirmarpedido() {
     const precoum = document.querySelector('.selecionado-f1 .preconumerico');
     const precodois = document.querySelector('.selecionado-f2 .preconumerico');
@@ -92,5 +139,39 @@ function confirmarpedido() {
     console.log(fundobranco);
 }
 
+
+function pedido() {
+    const precoum = document.querySelector('.selecionado-f1 .preconumerico');
+    const precodois = document.querySelector('.selecionado-f2 .preconumerico');
+    const precotres = document.querySelector('.selecionado-f3 .preconumerico');
+    const precorealum = Number(precoum.textContent);
+    const precorealdois = Number(precodois.textContent);
+    const precorealtres = Number(precotres.textContent);
+    const total = precorealdois + precorealtres + precorealum;
+    const totalreal = total.toFixed(2);
+    var s = totalreal.toString();//27.70
+    var index = 2;
+    s = s.substring(0, index) + ',' + s.substring(index + 1);
+    console.log(s);
+    const comidaum = document.querySelector('.selecionado-f1 .nome-da-comida');
+    const comidadois = document.querySelector('.selecionado-f2 .nome-da-comida');
+    const comidatres = document.querySelector('.selecionado-f3 .nome-da-comida');
+    const nome = prompt("Digite o seu nome");
+    const endereco = prompt("Digite o seu endereço");
+    const nomeurl = nome.replaceAll(' ', '+');
+    const enderecourl = endereco.replaceAll(' ', '+');
+    let textoComidaUm = condicaoum(comidaum);
+    let textoComidaDois = condicaodois(comidadois);
+    let textoComidaTres = condicaotres(comidatres);
+    console.log(textoComidaUm);
+    let link = "https://wa.me/5583999262591?text=Ol%c3%a1%2c+gostaria+de+fazer+o+pedido%3a%0d%0a-+Prato%3a+" + textoComidaUm + "%0d%0a-+Bebida%3a+" + textoComidaDois + "%0d%0a-+Sobremesa%3a+" + textoComidaTres + "%0d%0aTotal%3a+R%24+" + s + "%0A%0ANome%3A%20" + nomeurl + "%0AEndere%C3%A7o%3A%20" + enderecourl;
+    console.log(link);
+    document.querySelector('a').href = link;
+}
+
+function cancelamento() {
+    document.querySelector(".confirmar").classList.remove("aparecer");
+    document.querySelector(".opaco").classList.remove("aparecerdois");
+}
 
 
