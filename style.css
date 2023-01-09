@@ -71,22 +71,25 @@ main {
     color: #333333;
 }
 
-.desabilitar-scrollbars::-webkit-scrollbar {
-    background: transparent;
-    width: 0px;
-}
-
-.desabilitar-scrollbars {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.scroll {
+.container-scroll {
     margin-top: 17px;
     overflow: scroll;
     height: 235px;
     width: 100%;
     display: flex;
+}
+
+.disable-scrollbars::-webkit-scrollbar {
+    background: transparent;
+    /* Chrome/Safari/Webkit */
+    width: 0px;
+}
+
+.disable-scrollbars {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
 }
 
 .figura {

@@ -17,6 +17,7 @@
 
 <body>
     <header>
+        <div class="opaco"></div>
         <div class="cabecalho">
             <div class="nome-do-restaurante"> DrivenEats</div>
             <div class="slogan">Sua comida em 6 minutos!</div>
@@ -26,7 +27,7 @@
     <main>
         <section class="comida">
             <div class="titulo"> Primeiro, o seu prato</div>
-            <div class="scroll desabilitar-scrollbars">
+            <div class="container-scroll disable-scrollbars">
 
                 <div data-test="dish" class="opcao frango" onclick="primeiraescolha('.frango','#f1-c1')">
                     <div class="figura">
@@ -73,7 +74,7 @@
 
         <section class="bebida">
             <div class="titulo">Agora, sua bebida</div>
-            <div class="scroll desabilitar-scrollbars">
+            <div class="container-scroll disable-scrollbars">
                 <div data-test="dish" class="opcao coca-cola" onclick="segundaescolha('.coca-cola','#f2-c1')">
                     <div class="figura">
                         <img src="imagens/coca-cola.png" alt="coca-cola">
@@ -117,7 +118,7 @@
 
         <section class="sobremesa">
             <div class="titulo">Por fim, sua sobremesa</div>
-            <div class="scroll desabilitar-scrollbars">
+            <div class="container-scroll disable-scrollbars">
 
                 <div data-test="dish" class="opcao pudim" onclick="terceiraescolha('.pudim','#f3-c1')">
                     <div class="figura">
