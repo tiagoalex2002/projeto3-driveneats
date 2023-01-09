@@ -162,6 +162,22 @@ button {
     border: none;
 }
 
+.confirmacao {
+    background-color: #50D074;
+    margin: auto;
+    width: 377px;
+    height: 353px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -176px;
+    margin-left: -188px;
+    z-index: 4;
+}
+
 .caixa-confirmacao {
     width: 100%;
     padding-left: 25px;
@@ -214,4 +230,52 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.primeira-coluna-total {
+    display: flex;
+    justify-content: left;
+}
+
+.segunda-coluna-total {
+    display: flex;
+    justify-content: right;
+}
+
+.pedidoliberado {
+    background: #FFFFFF;
+    border: none;
+    width: 329px;
+    height: 52px;
+    border-radius: 100px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.018em;
+    color: #50D074;
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.cancelamento {
+    width: 333px;
+    height: 33px;
+    background: #50D074;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.018em;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    margin-top: 11px;
 }
