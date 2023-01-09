@@ -55,9 +55,9 @@ function enableButton() {
     }
 }
 function confirmarpedido() {
-    const precoum = document.querySelector('.selecionado-f1 .preconumerico');
-    const precodois = document.querySelector('.selecionado-f2 .preconumerico');
-    const precotres = document.querySelector('.selecionado-f3 .preconumerico');
+    const precoum = document.querySelector('.selecionado-f1 .precoreal');
+    const precodois = document.querySelector('.selecionado-f2 .precoreal');
+    const precotres = document.querySelector('.selecionado-f3 .precoreal');
     const precorealum = Number(precoum.textContent);
     const precorealdois = Number(precodois.textContent);
     const precorealtres = Number(precotres.textContent);
@@ -66,28 +66,28 @@ function confirmarpedido() {
     var s = totalreal.toString();//27.70
     var index = 2;
     s = s.substring(0, index) + ',' + s.substring(index + 1);
-    const comidaum = document.querySelector('.selecionado-f1 .nome-da-comida').innerHTML;
-    const comidadois = document.querySelector('.selecionado-f2 .nome-da-comida').innerHTML;
-    const comidatres = document.querySelector('.selecionado-f3 .nome-da-comida').innerHTML;
-    const confirmarPrato = document.querySelector(".pedido-1-1");
+    const comidaum = document.querySelector('.selecionado-f1 .titulo-comida').innerHTML;
+    const comidadois = document.querySelector('.selecionado-f2 .titulo-comida').innerHTML;
+    const comidatres = document.querySelector('.selecionado-f3 .titulo-comida').innerHTML;
+    const confirmarPrato = document.querySelector(".pedidoum-um");
     confirmarPrato.textContent = comidaum;
-    const confirmarBebida = document.querySelector(".pedido-2-2");
+    const confirmarBebida = document.querySelector(".pedidodois-um");
     confirmarBebida.textContent = comidadois;
-    const confirmarSobremesa = document.querySelector(".pedido-3-1");
+    const confirmarSobremesa = document.querySelector(".pedidotres-um");
     confirmarSobremesa.textContent = comidatres;
-    document.querySelector('.pedido-1-2').innerHTML = document.querySelector('.selecionado-f1 .preco').innerHTML;
-    document.querySelector('.pedido-2-2').innerHTML = document.querySelector('.selecionado-f2 .preco').innerHTML;
-    document.querySelector('.pedido-3-2').innerHTML = document.querySelector('.selecionado-f3 .preco').innerHTML;
-    document.querySelector('.pedidototal-2').innerHTML = "R$ " + s;
-    document.querySelector('.confirmacao').classList.add('aparecer');
+    document.querySelector('.pedidoum-dois').innerHTML = document.querySelector('.selecionado-f1 .preco').innerHTML;
+    document.querySelector('.pedidodois-dois').innerHTML = document.querySelector('.selecionado-f2 .preco').innerHTML;
+    document.querySelector('.pedidotres-dois').innerHTML = document.querySelector('.selecionado-f3 .preco').innerHTML;
+    document.querySelector('.pedidototal-dois').innerHTML = "R$ " + s;
+    document.querySelector('.confirmar').classList.add('aparecer');
     const fundobranco = document.querySelector('.opaco');
     fundobranco.classList.add('aparecerdois');
     console.log(fundobranco);
 }
 function pedido() {
-    const precoum = document.querySelector('.selecionado-f1 .preconumerico');
-    const precodois = document.querySelector('.selecionado-f2 .preconumerico');
-    const precotres = document.querySelector('.selecionado-f3 .preconumerico');
+    const precoum = document.querySelector('.selecionado-f1 .precoreal');
+    const precodois = document.querySelector('.selecionado-f2 .precoreal');
+    const precotres = document.querySelector('.selecionado-f3 .precoreal');
     const precorealum = Number(precoum.textContent);
     const precorealdois = Number(precodois.textContent);
     const precorealtres = Number(precotres.textContent);
@@ -97,9 +97,9 @@ function pedido() {
     var index = 2;
     s = s.substring(0, index) + ',' + s.substring(index + 1);
     console.log(s);
-    const comidaum = document.querySelector('.selecionado-f1 .nome-da-comida');
-    const comidadois = document.querySelector('.selecionado-f2 .nome-da-comida');
-    const comidatres = document.querySelector('.selecionado-f3 .nome-da-comida');
+    const comidaum = document.querySelector('.selecionado-f1 .titulo-comida');
+    const comidadois = document.querySelector('.selecionado-f2 .titulo-comida');
+    const comidatres = document.querySelector('.selecionado-f3 .titulo-comida');
     const nome = prompt("Digite seu nome");
     const endereco = prompt("Digite seu endereço");
     const nomeurl = nome.replaceAll(' ', '+');
@@ -112,6 +112,7 @@ function pedido() {
     console.log(link);
     document.querySelector('a').href = link;
 }
+
 function condicaoum(comidaum) {
     let textoComidaUm = 0;
     if (comidaum.textContent === "Frango Yin Yang") {
@@ -157,6 +158,6 @@ function condicaotres(comidatres) {
     }
 }
 function cancelar() {
-    document.querySelector(".confirmacao").classList.remove("aparecer");
+    document.querySelector(".confirmar").classList.remove("aparecer");
     document.querySelector(".opaco").classList.remove("aparecerdois");
 }
