@@ -1,25 +1,10 @@
-function enableButton() {
-    const primeiraselecao = document.querySelector('.selecionado-f1');
-    const segundaselecao = document.querySelector('.selecionado-f2');
-    const terceiraselecao = document.querySelector('.selecionado-f3');
-    if (primeiraselecao !== null && segundaselecao !== null && terceiraselecao !== null) {
-        document.querySelector('.botao-footer').disabled = false;
-        const botao = document.querySelector('.botao-footer');
-        botao.classList.add('verde');
-        botao.textContent = "Fechar pedido"
-    }
-}
-
-
-
-
 function primeiraescolha(opcaoSelecionada, idCheck) {
-    const Anterior = document.querySelector('.selecionado-f1');
-    if (Anterior !== null) {
-        Anterior.classList.remove('selecionado-f1');
+    const botaoAnterior = document.querySelector('.selecionado-f1');
+    if (botaoAnterior !== null) {
+        botaoAnterior.classList.remove('selecionado-f1');
     }
-    const Selecionado = document.querySelector(opcaoSelecionada);
-    Selecionado.classList.add('selecionado-f1');
+    const botaoSelecionado = document.querySelector(opcaoSelecionada);
+    botaoSelecionado.classList.add('selecionado-f1');
     const checkAnterior = document.querySelector('.checkSelecionado-f1')
     if (checkAnterior !== null) {
         checkAnterior.classList.remove('checkSelecionado-f1')
@@ -28,14 +13,13 @@ function primeiraescolha(opcaoSelecionada, idCheck) {
     checkSelecionado.classList.add('checkSelecionado-f1');
     enableButton();
 }
-
 function segundaescolha(opcaoSelecionada, idCheck) {
-    const Anterior = document.querySelector('.selecionado-f2');
-    if (Anterior !== null) {
-        Anterior.classList.remove('selecionado-f2');
+    const botaoAnterior = document.querySelector('.selecionado-f2');
+    if (botaoAnterior !== null) {
+        botaoAnterior.classList.remove('selecionado-f2');
     }
-    const Selecionado = document.querySelector(opcaoSelecionada);
-    Selecionado.classList.add('selecionado-f2');
+    const botaoSelecionado = document.querySelector(opcaoSelecionada);
+    botaoSelecionado.classList.add('selecionado-f2');
     const checkAnterior = document.querySelector('.checkSelecionado-f2')
     if (checkAnterior !== null) {
         checkAnterior.classList.remove('checkSelecionado-f2')
@@ -44,14 +28,13 @@ function segundaescolha(opcaoSelecionada, idCheck) {
     checkSelecionado.classList.add('checkSelecionado-f2');
     enableButton();
 }
-
 function terceiraescolha(opcaoSelecionada, idCheck) {
-    const Anterior = document.querySelector('.selecionado-f3');
-    if (Anterior !== null) {
-        Anterior.classList.remove('selecionado-f3');
+    const botaoAnterior = document.querySelector('.selecionado-f3');
+    if (botaoAnterior !== null) {
+        botaoAnterior.classList.remove('selecionado-f3');
     }
-    const Selecionado = document.querySelector(opcaoSelecionada);
-    Selecionado.classList.add('selecionado-f3');
+    const botaoSelecionado = document.querySelector(opcaoSelecionada);
+    botaoSelecionado.classList.add('selecionado-f3');
     const checkAnterior = document.querySelector('.checkSelecionado-f3')
     if (checkAnterior !== null) {
         checkAnterior.classList.remove('checkSelecionado-f3')
@@ -60,54 +43,17 @@ function terceiraescolha(opcaoSelecionada, idCheck) {
     checkSelecionado.classList.add('checkSelecionado-f3');
     enableButton();
 }
-
-function condicaoum(comidaum) {
-    let textoComidaUm = 0;
-    if (comidaum.textContent === "Frango Yin Yang") {
-        textoComidaUm = "Frango+Yin+Yang";
-        return textoComidaUm;
-    }
-    else if (comidaum.textContent === "Pizza de Pepperoni") {
-        textoComidaUm = "Pizza+de+Pepperoni";
-        return textoComidaUm;
-    }
-    else if (comidaum.textContent === "Macarrão Carbonara") {
-        textoComidaUm = "Macarrão+Carbonara";
-        return textoComidaUm;
-    }
-    console.log(textoComidaUm);
-}
-
-function condicaodois(comidadois) {
-    if (comidadois.textContent === "Coquinha gelada") {
-        let textoComidaDois = "Coquinha+gelada";
-        return (textoComidaDois);
-    }
-    else if (comidadois.textContent === "Sucos Naturais") {
-        let textoComidaDois = "Sucos+Naturais";
-        return (textoComidaDois);
-    }
-    else if (comidadois.textContent === "Heineken") {
-        let textoComidaDois = "Heineken";
-        return (textoComidaDois);
+function enableButton() {
+    const selecaoum = document.querySelector('.selecionado-f1');
+    const selecaodois = document.querySelector('.selecionado-f2');
+    const selecaotres = document.querySelector('.selecionado-f3');
+    if (selecaoum !== null && selecaodois !== null && selecaotres !== null) {
+        document.querySelector('.botao-footer').disabled = false;
+        const botao = document.querySelector('.botao-footer');
+        botao.classList.add('verde');
+        botao.textContent = "Fechar pedido"
     }
 }
-
-function condicaotres(comidatres) {
-    if (comidatres.textContent === "Pudim") {
-        let textoComidaTres = "Pudim";
-        return textoComidaTres;
-    }
-    else if (comidatres.textContent === "Petit Gatêau") {
-        let textoComidaTres = "Petit+Gatêau";
-        return textoComidaTres;
-    }
-    else if (comidatres.textContent === "Dindin") {
-        let textoComidaTres = "Dindin";
-        return textoComidaTres;
-    }
-}
-
 function confirmarpedido() {
     const precoum = document.querySelector('.selecionado-f1 .preconumerico');
     const precodois = document.querySelector('.selecionado-f2 .preconumerico');
@@ -125,7 +71,7 @@ function confirmarpedido() {
     const comidatres = document.querySelector('.selecionado-f3 .nome-da-comida').innerHTML;
     const confirmarPrato = document.querySelector(".pedido-1-1");
     confirmarPrato.textContent = comidaum;
-    const confirmarBebida = document.querySelector(".pedido-2-1");
+    const confirmarBebida = document.querySelector(".pedido-2-2");
     confirmarBebida.textContent = comidadois;
     const confirmarSobremesa = document.querySelector(".pedido-3-1");
     confirmarSobremesa.textContent = comidatres;
@@ -133,13 +79,11 @@ function confirmarpedido() {
     document.querySelector('.pedido-2-2').innerHTML = document.querySelector('.selecionado-f2 .preco').innerHTML;
     document.querySelector('.pedido-3-2').innerHTML = document.querySelector('.selecionado-f3 .preco').innerHTML;
     document.querySelector('.pedidototal-2').innerHTML = "R$ " + s;
-    document.querySelector('.confirmar').classList.add('aparecer');
+    document.querySelector('.confirmacao').classList.add('aparecer');
     const fundobranco = document.querySelector('.opaco');
     fundobranco.classList.add('aparecerdois');
     console.log(fundobranco);
 }
-
-
 function pedido() {
     const precoum = document.querySelector('.selecionado-f1 .preconumerico');
     const precodois = document.querySelector('.selecionado-f2 .preconumerico');
@@ -156,8 +100,8 @@ function pedido() {
     const comidaum = document.querySelector('.selecionado-f1 .nome-da-comida');
     const comidadois = document.querySelector('.selecionado-f2 .nome-da-comida');
     const comidatres = document.querySelector('.selecionado-f3 .nome-da-comida');
-    const nome = prompt("Digite o seu nome");
-    const endereco = prompt("Digite o seu endereço");
+    const nome = prompt("Digite seu nome");
+    const endereco = prompt("Digite seu endereço");
     const nomeurl = nome.replaceAll(' ', '+');
     const enderecourl = endereco.replaceAll(' ', '+');
     let textoComidaUm = condicaoum(comidaum);
@@ -168,10 +112,51 @@ function pedido() {
     console.log(link);
     document.querySelector('a').href = link;
 }
-
-function cancelamento() {
-    document.querySelector(".confirmar").classList.remove("aparecer");
+function condicaoum(comidaum) {
+    let textoComidaUm = 0;
+    if (comidaum.textContent === "Frango Yin Yang") {
+        textoComidaUm = "Frango+Yin+Yang";
+        return textoComidaUm;
+    }
+    else if (comidaum.textContent === "Pizza de Pepperoni.") {
+        textoComidaUm = "Pizza+de+Pepperoni";
+        return textoComidaUm;
+    }
+    else if (comidaum.textContent === "Macarrão Carbonara") {
+        textoComidaUm = "Macarrão+Carbonara";
+        return textoComidaUm;
+    }
+    console.log(textoComidaUm);
+}
+function condicaodois(comidadois) {
+    if (comidadois.textContent === "Coquinha gelada") {
+        let textoComidaDois = "Coquinha+gelada";
+        return (textoComidaDois);
+    }
+    else if (comidadois.textContent === "Sucos Naturais") {
+        let textoComidaDois = "Sucos+Naturais";
+        return (textoComidaDois);
+    }
+    else if (comidadois.textContent === "Heineken") {
+        let textoComidaDois = "Heineken";
+        return (textoComidaDois);
+    }
+}
+function condicaotres(comidatres) {
+    if (comidatres.textContent === "Pudim") {
+        let textoComidaTres = "Pudim";
+        return textoComidaTres;
+    }
+    else if (comidatres.textContent === "Petit Gateau") {
+        let textoComidaTres = "Petit+Gateau";
+        return textoComidaTres;
+    }
+    else if (comidatres.textContent === "Dindin") {
+        let textoComidaTres = "Dindin";
+        return textoComidaTres;
+    }
+}
+function cancelar() {
+    document.querySelector(".confirmacao").classList.remove("aparecer");
     document.querySelector(".opaco").classList.remove("aparecerdois");
 }
-
-
